@@ -10,6 +10,6 @@ namespace Musica.Data
         {
         }
         
-        DbSet<MusicaModel> ?Musicas { get; set; }
+        public DbSet<MusicaModel> ?musicas { get; set; }
     }
 }
