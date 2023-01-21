@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Musica.Migrations
 {
     /// <inheritdoc />
-    public partial class TabelaMusica : Migration
+    public partial class Musica : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,7 +16,7 @@ namespace Musica.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Musicas",
+                name: "musicas",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -29,7 +29,7 @@ namespace Musica.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Musicas", x => x.Id);
+                    table.PrimaryKey("PK_musicas", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
         }
@@ -38,7 +38,7 @@ namespace Musica.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Musicas");
+                name: "musicas");
         }
     }
 }

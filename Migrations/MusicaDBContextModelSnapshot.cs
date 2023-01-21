@@ -36,7 +36,7 @@ namespace Musica.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Musicas");
+                    b.ToTable("musicas");
                 });
 #pragma warning restore 612, 618
         }

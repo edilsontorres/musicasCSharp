@@ -11,8 +11,8 @@ using Musica.Data;
 namespace Musica.Migrations
 {
     [DbContext(typeof(MusicaDBContext))]
-    [Migration("20230121021800_TabelaMusica")]
-    partial class TabelaMusica
+    [Migration("20230121233334_Musica")]
+    partial class Musica
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,7 +39,7 @@ namespace Musica.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Musicas");
+                    b.ToTable("musicas");
                 });
 #pragma warning restore 612, 618
         }
