@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projeto\\Musica\\Musica.csproj": {}
+    "C:\\Projeto\\Musica\\Server\\Musica.csproj": {}
   },
   "projects": {
-    "C:\\Projeto\\Musica\\Musica.csproj": {
+    "C:\\Projeto\\Musica\\Server\\Musica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projeto\\Musica\\Musica.csproj",
+        "projectUniqueName": "C:\\Projeto\\Musica\\Server\\Musica.csproj",
         "projectName": "Musica",
-        "projectPath": "C:\\Projeto\\Musica\\Musica.csproj",
+        "projectPath": "C:\\Projeto\\Musica\\Server\\Musica.csproj",
         "packagesPath": "C:\\Users\\edilson\\.nuget\\packages\\",
-        "outputPath": "C:\\Projeto\\Musica\\obj\\",
+        "outputPath": "C:\\Projeto\\Musica\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\edilson\\AppData\\Roaming\\NuGet\\NuGet.Config",

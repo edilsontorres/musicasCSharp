@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uU44MFR/0EuNW3suQYAHY29/qYEnZ1a9lznIfVDoNWjwQPneAQE3KwkVsIJQyI781SLSSLk6bvZEUsM1LglgAw==",
+  "dgSpecHash": "txmldhVO/LmOHI1CFFQQWMxno8vOALRUS+FOQF8kmPE71b9BhQm+gbmOpwB8dBl7fWq6ljMkC2+BOJ1cxnqwIQ==",
   "success": true,
-  "projectFilePath": "C:\\Projeto\\Musica\\Musica.csproj",
+  "projectFilePath": "C:\\Projeto\\Musica\\Server\\Musica.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\edilson\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\edilson\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.1\\microsoft.aspnetcore.openapi.7.0.1.nupkg.sha512",
