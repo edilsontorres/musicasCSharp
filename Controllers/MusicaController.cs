@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Musica.MusicaController
 {
     [Controller]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class MusicaController : ControllerBase
     {
         private MusicaDBContext mdc;
@@ -18,7 +18,7 @@ namespace Musica.MusicaController
             this.mdc = context;
         }
 
-        [HttpPost("api")]
+        [HttpPost]
         public async Task<ActionResult> adicionar([FromBody] MusicaModel m)
         {
             mdc.musicas?.Add(m);
@@ -27,22 +27,22 @@ namespace Musica.MusicaController
 
         }
 
-        [HttpGet("api")]
+        [HttpGet]
         public async Task<ActionResult> listar()
         {
             var dados = await mdc.musicas!.ToListAsync();
             return Ok(dados);
         }
 
-        [HttpGet("api/{id}")]
-        public MusicaModel filtrar(int id)
+        [HttpGet("{id}")]
+        public MusicaModel filtrar([FromRoute] int id)
         {
             MusicaModel ?m = mdc.musicas?.Find(id);
             return m!;
            
         }
 
-        [HttpPut("api")]
+        [HttpPut]
         public async Task<ActionResult> editar([FromBody] MusicaModel m)
         {
             
@@ -51,8 +51,8 @@ namespace Musica.MusicaController
             return Ok(m);
         }
 
-        [HttpDelete("api/{id}")]
-        public async Task<ActionResult> remover(int id)
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> remover([FromRoute] int id)
         {
             MusicaModel m = filtrar(id);
 
