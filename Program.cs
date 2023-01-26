@@ -3,6 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//Politica de Cors, liberando hosts
+builder.Services.AddCors(p => p.AddPolicy("corsapp", builder => { 
+    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader(); }));
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -25,7 +29,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+
 app.UseHttpsRedirection();
+
+app.UseCors("corsapp");
 
 app.UseAuthorization();
 
