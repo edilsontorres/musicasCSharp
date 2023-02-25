@@ -42,13 +42,22 @@ namespace Musica.MusicaController
            
         }
 
-        [HttpPut]
-        public async Task<ActionResult> editar([FromBody] MusicaModel m)
+        [HttpPut("{id}")]
+        public async Task<ActionResult> editar([FromRoute] int id, [FromBody] MusicaModel m)
         {
+            var musica = mdc.musicas?.SingleOrDefault(x => x.Id.Equals(id));
             
-            mdc.musicas?.Update(m);
+                
+            musica!.NomeArtista = m.NomeArtista;
+            musica.NomeMusica = m.NomeMusica;
+            musica.Data = m.Data;
+              
+
+            mdc.musicas?.Update(musica);
             await mdc.SaveChangesAsync();
-            return Ok(m);
+            return Ok(musica);
+            
+             
         }
 
         [HttpDelete("{id}")]
