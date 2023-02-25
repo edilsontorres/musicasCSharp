@@ -11,6 +11,6 @@ namespace Musica.Models
 
         public string? NomeMusica { get;  set; }
 
-        public DateOnly Data { get; set; }
+        public DateTime Data { get; set; }
     }
 }
