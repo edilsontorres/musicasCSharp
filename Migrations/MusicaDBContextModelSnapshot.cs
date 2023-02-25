@@ -25,8 +25,8 @@ namespace Musica.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<DateOnly>("Data")
-                        .HasColumnType("date");
+                    b.Property<DateTime>("Data")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("NomeArtista")
                         .HasColumnType("longtext");
